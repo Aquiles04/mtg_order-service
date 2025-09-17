@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/mtgorders
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+server:
+  port: 8080
+jwt:
+  secret: very-secret-key-change-me
+  access-expiration-ms: 900000    # 15 minutes
+  refresh-expiration-ms: 2592000000 # 30 days
+kafka:
+  bootstrap-servers: localhost:9092
